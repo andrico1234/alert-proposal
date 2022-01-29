@@ -13,7 +13,21 @@
     </nav>
     <h1>Implementation 1: Alert + Status components</h1>
 
+    <p>
+      This implementation registers two separate components, Alert and Status,
+      with role alert and status respectively
+    </p>
+    <p>Clicking the dismiss button removes the element from the DOM</p>
+    <p>
+      By default, these elements are statically positioned by default. Their
+      positions can be changed using shadow parts
+    </p>
+
     <p>Press the add alert button and see what happens</p>
+    <p>
+      Note: Use a screen reader to distinguish the behaviour between the two
+      elements.
+    </p>
 
     <div id="buttons">
       <button onclick="addAlert()">Add alert</button>
