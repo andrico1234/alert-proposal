@@ -3,6 +3,10 @@ body {
   max-width: 60ch;
 }
 
+.stack > * {
+  margin-bottom: 16px;
+}
+
 button {
   height: 100%;
   font-weight: 500;
@@ -12,8 +16,15 @@ button {
   cursor: pointer;
   border: 1px solid black;
   box-shadow: -1px 0 white, 0px -1px 0 white, 1px 1px black;
-  margin-bottom: 32px;
   padding: 8px;
+}
+
+#interrupt-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
 }
 
 #buttons {
@@ -22,6 +33,6 @@ button {
   gap: 8px;
 }
 
-#alert-wrapper > * {
+#alert-wrapper > *, #message-wrapper > * {
   margin-top: 8px;
 }

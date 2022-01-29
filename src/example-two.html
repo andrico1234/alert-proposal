@@ -24,6 +24,38 @@
       changed using shadow parts
     </p>
 
-    <p>Currently WIP</p>
+    <div class="stack">
+      <button onclick="addMessage()">Add message</button>
+      <div id="interrupt-wrapper">
+        <input id="interrupt-check" type="checkbox" />
+        <label for="interrupt-check">Should message interrupt?</label>
+      </div>
+    </div>
+
+    <div id="message-wrapper"></div>
+    <script type="module">
+      import "./message-one.js";
+    </script>
+
+    <script>
+      const messageWrapperEl = document.getElementById("message-wrapper");
+      const checkboxEl = document.getElementById("interrupt-check");
+      function addMessage() {
+        const messageEl = document.createElement("message-one");
+        const container = document.createElement("div");
+
+        const isInterrupting = checkboxEl.checked;
+
+        const interruptingMessage = "This is an interrupting message";
+        const nonInterruptingMessage = "This is an non-interrupting message";
+
+        messageEl.innerText = isInterrupting
+          ? interruptingMessage
+          : nonInterruptingMessage;
+
+        container.appendChild(messageEl);
+        messageWrapperEl.appendChild(container);
+      }
+    </script>
   </body>
 </html>
