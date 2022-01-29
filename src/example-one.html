@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert proposal #1</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+    <h1>Implementation 1: Alert + Status components</h1>
+
+    <p>Press the add alert button and see what happens</p>
+
+    <div id="buttons">
+      <button onclick="addAlert()">Add alert</button>
+      <button onclick="addStatus()">Add status</button>
+    </div>
+    <div id="alert-wrapper"></div>
+    <script type="module">
+      import "./alert-one.js";
+      import "./status-one.js";
+    </script>
+    <script>
+      const alertWrapper = document.getElementById("alert-wrapper");
+      function addAlert() {
+        const newEl = document.createElement("alert-one");
+        const container = document.createElement("div");
+
+        newEl.innerText = "This is an alert";
+
+        container.appendChild(newEl);
+        alertWrapper.appendChild(container);
+      }
+
+      function addStatus() {
+        const newEl = document.createElement("status-one");
+        const container = document.createElement("div");
+
+        newEl.innerText = "This is a status";
+
+        container.appendChild(newEl);
+        alertWrapper.appendChild(container);
+      }
+    </script>
+  </body>
+</html>

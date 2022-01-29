@@ -1,0 +1,27 @@
+body {
+  font-family: Tahoma;
+  max-width: 60ch;
+}
+
+button {
+  height: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+  background: white;
+  cursor: pointer;
+  border: 1px solid black;
+  box-shadow: -1px 0 white, 0px -1px 0 white, 1px 1px black;
+  margin-bottom: 32px;
+  padding: 8px;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+#alert-wrapper > * {
+  margin-top: 8px;
+}
