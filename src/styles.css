@@ -33,6 +33,13 @@ button {
   gap: 8px;
 }
 
-#alert-wrapper > *, #message-wrapper > * {
+#alert-wrapper > *,
+#message-wrapper > * {
   margin-top: 8px;
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  accent-color: black;
 }
