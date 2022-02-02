@@ -13,6 +13,44 @@
     </nav>
     <h1>Implementation 3: Single live region</h1>
 
-    <p>Currently WIP</p>
+    <p>
+      Both
+      <a
+        href="https://docs.google.com/document/d/1d9eJ2AL5ni7bNENfi6i6M3Ap01kNnI-Oz-BC612mUM0/edit?disco=AAAAPlt7hlU"
+        >Adrian Roselli and Scott O'Hara</a
+      >
+      recommended a component that manages a single live region.
+    </p>
+    <p>
+      The `live-region` would then expose APIs to allow append/remove content as
+      needed. The SR need only monitor one live region and need not make up its
+      own rules about how to handle competing regions.
+    </p>
+
+    <p>
+      The live region has `aria-atomic` set to `false` to only read out the
+      content that's changed
+    </p>
+
+    <p>
+      The live region has `aria-relevent` set to the default `additions text` to
+      read out only when nodes and text content is added to the region.
+    </p>
+
+    <button style="margin-bottom: 16px" onclick="append()">
+      Append item to live region
+    </button>
+
+    <live-region id="live-region"></alert-region>
+
+    <script type="module">
+      import "./alert-region.js";
+    </script>
+    <script>
+      const alertRegion = document.getElementById("alert-region");
+      function append() {
+        alertRegion.addChild("This is a new item");
+      }
+    </script>
   </body>
 </html>
