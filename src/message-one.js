@@ -29,10 +29,18 @@ class Message extends LitElement {
     }
   `;
 
-  interrupt = false;
+  static properties = {
+    interrupt: {},
+  };
 
   #dismiss() {
     this.parentNode.removeChild(this);
+  }
+
+  constructor() {
+    super();
+
+    this.interrupt = false;
   }
 
   render() {

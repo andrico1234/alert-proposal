@@ -41,15 +41,15 @@
       Append item to live region
     </button>
 
-    <live-region id="live-region"></alert-region>
+    <live-region id="live-region"></live-region>
 
     <script type="module">
       import "./alert-region.js";
     </script>
     <script>
-      const alertRegion = document.getElementById("alert-region");
+      const liveRegion = document.getElementById("live-region");
       function append() {
-        alertRegion.addChild("This is a new item");
+        liveRegion.addChild("This is a new item");
       }
     </script>
   </body>

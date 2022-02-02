@@ -45,6 +45,7 @@
         const container = document.createElement("div");
 
         const isInterrupting = checkboxEl.checked;
+        messageEl.setAttribute("interrupt", isInterrupting);
 
         const interruptingMessage = "This is an interrupting message";
         const nonInterruptingMessage = "This is an non-interrupting message";
