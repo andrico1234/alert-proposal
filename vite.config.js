@@ -9,6 +9,7 @@ module.exports = defineConfig({
         main: resolve(__dirname, "index.html"),
         exampleOne: resolve(__dirname, "src/example-one.html"),
         exampleTwo: resolve(__dirname, "src/example-two.html"),
+        exampleThree: resolve(__dirname, "src/example-three.html"),
       },
     },
   },
