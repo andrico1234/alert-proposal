@@ -63,8 +63,8 @@ class LiveRegion extends LitElement {
     return html`
       <div
         aria-atomic="false"
-        role="alert"
-        aria-live="assertive"
+        role="status"
+        aria-live="polite"
         part="container"
         id="container"
       ></div>
